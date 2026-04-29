@@ -1,4 +1,3 @@
-# 🧠 Maltego Kali Lab Installer
 
 ![Kali Linux](https://img.shields.io/badge/Kali-Linux-blue?logo=kalilinux)
 ![Docker](https://img.shields.io/badge/Docker-Ready-blue?logo=docker)
@@ -6,10 +5,11 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Maintained](https://img.shields.io/badge/Maintained-Yes-brightgreen)
 
+
 ![Maltego Kali Lab Installer Banner](screenshots/banner.png)
 
 
-## 🚀 Automated Maltego Setup for Kali Linux
+## 🚀 Maltego Kali Lab Installer
 
 A **production-ready installer** that automates the setup of **Maltego CE on Kali Linux**, including:
 
