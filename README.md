@@ -114,7 +114,7 @@ maltego
 
 ### Java errors (important)
 
-Your script already fixes:
+Script already fixes:
 
 * `sun.awt.SunToolkit access errors`
 * `sun.security.ssl issues`
