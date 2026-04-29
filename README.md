@@ -6,7 +6,8 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Maintained](https://img.shields.io/badge/Maintained-Yes-brightgreen)
 
----
+![Maltego Kali Lab Installer Banner](screenshots/banner.png)
+
 
 ## 🚀 Automated Maltego Setup for Kali Linux
 
