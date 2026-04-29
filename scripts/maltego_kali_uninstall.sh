@@ -32,7 +32,10 @@ kill_maltego_processes() {
 remove_maltego_package() {
     log "Purging Maltego package"
 
-    if dpkg -l | grep -qi "^ii  maltego"; then
+    if dpkg-query -W -f='${Status}' maltego 2>/dev/null | grep -q "install ok installed"; then
+        sudo apt purge -y maltego
+        ok "Maltego package purged"
+    elif dpkg -l 2>/dev/null | grep -qi '^..[[:space:]]*maltego[[:space:]]'; then
         sudo apt purge -y maltego
         ok "Maltego package purged"
     else
@@ -41,7 +44,7 @@ remove_maltego_package() {
 }
 
 remove_leftover_binary() {
-    log "Removing leftover Maltego binary if present"
+    log "Removing leftover Maltego binaries"
 
     sudo rm -f /usr/bin/maltego
     sudo rm -f /usr/local/bin/maltego
@@ -87,8 +90,8 @@ verify_uninstall() {
         ok "maltego not found"
     fi
 
-    if dpkg -l | grep -qi "maltego"; then
-        warn "Maltego package still appears in dpkg output"
+    if dpkg-query -W -f='${Status}' maltego 2>/dev/null | grep -q "install ok installed"; then
+        warn "Maltego package still installed"
         dpkg -l | grep -i maltego || true
         failed=1
     else
