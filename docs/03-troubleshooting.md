@@ -135,5 +135,3 @@ Then retry installation.
 * Run as normal Kali user with sudo privileges
 * Maltego requires GUI access
 * Some transforms require additional API keys
-
-Tell me when done.
